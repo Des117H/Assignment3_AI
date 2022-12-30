@@ -115,7 +115,7 @@ class QLearningAgent(ReinforcementAgent):
         action = None
         "*** YOUR CODE HERE ***"
         # util.raiseNotDefined()
-        # for an epsilon greedy approad
+        # for an epsilon greedy approach
         # we choose random action epsilon times
         # and optimal 1-epsilon time
         if util.flipCoin(self.epsilon):
@@ -218,8 +218,8 @@ class ApproximateQAgent(PacmanQAgent):
         """
         "*** YOUR CODE HERE ***"
         # overriding the update function
-        ## qvalue for current state is obtained from getQvalue method
-        ## for nextState it is calculated using the computevalueFromQvalue method
+        # qvalue for current state is obtained from getQvalue method
+        # for nextState it is calculated using the computevalueFromQvalue method
         qValueCurrentState = self.getQValue(state, action)
         feature = self.featExtractor.getFeatures(state, action)
         qValueNextState = self.computeValueFromQValues(nextState)
